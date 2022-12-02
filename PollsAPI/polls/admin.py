@@ -3,5 +3,5 @@ from .models import Poll, Choice
 
 # Register your models here.
 
-admin.register(Poll)
-admin.register(Choice)
+admin.site.register(Poll)
+admin.site.register(Choice)
