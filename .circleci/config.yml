@@ -1,24 +1,22 @@
 version: 2
 
-# Define the jobs to be run django tests python:3.6.1
+# Define the jobs to be run django tests python:3.10
 
 jobs:
      build:
         docker:
-        - image: circleci/python:3.6.1
+        - image: circleci/python:3.10
         steps:
         - checkout
         - run:
             name: Install dependencies
             command: |
-                pip install --upgrade pip
                 python -m venv venv
                 . venv/bin/activate
                 pip install -r requirements.txt
         - run:
             name: Run tests
             command: |
-                pip install --upgrade pip
                 . venv/bin/activate
                 cd PollsAPI
                 python manage.py test
