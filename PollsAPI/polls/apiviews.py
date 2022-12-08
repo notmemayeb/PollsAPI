@@ -68,3 +68,5 @@ class LoginView(APIView):
         else:
             return Response({"error": "Wrong Credentials"}, status=status.HTTP_400_BAD_REQUEST)
 
+
+
